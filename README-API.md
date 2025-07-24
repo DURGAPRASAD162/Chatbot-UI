@@ -66,7 +66,7 @@ When deploying the application, the following environment variables can be set:
 | --------------------- | ------------------------------ | ------------------------------------------------------- |
 | OPENAI_API_KEY        |                                | The default API key used for authentication with OpenAI |
 | DEFAULT_MODEL         | `gpt-3.5-turbo`                | The default model to use on new conversations           |
-| DEFAULT_SYSTEM_PROMPT | [see here](utils/app/const.ts) | The defaut system prompt to use on new conversations    |
+| DEFAULT_SYSTEM_PROMPT | [see here](https://github.com/DURGAPRASAD162/Chatbot-UI/blob/75eca943f4a17a6d2bf6473b244e62b6a8cfa449/utils%20/app/const.ts) | The defaut system prompt to use on new conversations    |
 
 If you do not provide an OpenAI API key with `OPENAI_API_KEY`, users will have to provide their own key.
 If you don't have an OpenAI API key, you can get one [here](https://platform.openai.com/account/api-keys).
