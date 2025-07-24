@@ -4,11 +4,20 @@
 
 ## **Introduction:**
 
-In today’s digital world, user engagement is key to the success of any application. Implementing DevSecOps practices is essential for ensuring security, reliability, and efficient deployment processes. In this project, we aim to implement DevSecOps for deploying an OpenAI Chatbot UI. We will use Kubernetes (EKS) for container orchestration, Jenkins for Continuous Integration/Continuous Deployment (CI/CD), and Docker for containerization.
+OpenAI Finance Chatbot is an AI-powered assistant that provides real-time financial insights through natural conversation. It helps users analyze market trends, manage portfolios, generate custom reports, and simplify complex financial data—ideal for both casual investors and professionals.
 
-**What is ChatBOT?**
+**What is ChatBOT with finance analysis?**
 
-ChatBOT is an AI-powered conversational agent trained on extensive human conversation data. It utilizes natural language processing techniques to understand user queries and provide human-like responses. By simulating natural language interactions, ChatBOT enhances user engagement and provides personalized assistance to users.
+Its real-time financial insights and data-driven decision-making. Powered by advanced language models and integrated with financial analysis tools, this chatbot offers instant, conversational access to:
+📈 Market Trends & Stock Insights
+
+💹 Portfolio Analysis & Optimization
+
+🧾 Budget Planning & Expense Tracking
+
+📊 Custom Reports & Forecasting Models
+
+💼 Corporate Financial Statement Summaries
 
 **Why ChatBOT?**
 
@@ -36,10 +45,10 @@ By implementing DevSecOps practices and leveraging modern technologies like Kube
 
 1. Clone the GitHub repository.
 
-**GITHUB REPO**: [Chatbot-UI](https://github.com/NotHarshhaa/DevOps-Projects/tree/master/DevOps-Project-28/Chatbot-UI)
+**GITHUB REPO**: [Chatbot-UI](https://github.com/DURGAPRASAD162/Chatbot-UI.git)
 
 ```
-git clone https://github.com/NotHarshhaa/DevOps-Projects/DevOps-Project-28/Chatbot-UI
+git clone https://github.com/DURGAPRASAD162/Chatbot-UI.git
 cd Jenkins-Server-TF
 ```
 
