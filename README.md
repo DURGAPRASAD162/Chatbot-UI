@@ -92,15 +92,11 @@ aws configure
 terraform init
 ```
 
-![](<https://miro.medium.com/v2/resize:fit:700/1*lrsh4lLt0pkl_FUqNEmtkQ.png>)
-
 7\. Run the below command to get the blueprint of what kind of AWS services will be created.
 
 ```go
 terraform plan -var-file=variables.tfvars
 ```
-
-![](<https://miro.medium.com/v2/resize:fit:700/1*cWnWUtSM-7Ghf3up4_aVBQ.png>)
 
 8\. Now, run the below command to create the infrastructure on AWS Cloud which will take 3 to 4 minutes maximum.
 
@@ -416,8 +412,6 @@ This create all the resources in the Cluster:
 kubectl get all
 ```
 
-![](<https://miro.medium.com/v2/resize:fit:700/1*AyoKZWjLQjATodohBQX5jQ.png>)
-
 This will create an Classic Load Balancer on AWS Console:
 
 ![](<https://miro.medium.com/v2/resize:fit:700/1*wa576USefwHkdXn2puGj_g.png>)
@@ -445,7 +439,7 @@ pipeline{
     stages {
         stage('Checkout from Git'){
             steps{
-                git branch: 'master', url: 'https://github.com/NotHarshhaa/DevOps-Project-28/Chatbot-UI.git'
+                git branch: 'master', url: 'https://github.com/DURGAPRASAD162/Chatbot-UI.git'
             }
         }
         stage('Install Dependencies') {
@@ -484,15 +478,15 @@ pipeline{
                 script{
                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker'){   
                        sh "docker build -t chatbot ."
-                       sh "docker tag chatbot ProDevOpsGuyTech/chatbot:latest "
-                       sh "docker push ProDevOpsGuyTech/chatbot:latest "
+                       sh "docker tag chatbot durgaprasad337/chatbot:latest "
+                       sh "docker push durgaprasad337/chatbot:latest "
                     }
                 }
             }
         }
         stage("TRIVY"){
             steps{
-                sh "trivy image ProDevOpsGuyTech/chatbot:latest > trivy.json" 
+                sh "trivy image durgaprasad337/chatbot:latest > trivy.json" 
             }
         }
         stage ("Remove container") {
@@ -503,7 +497,7 @@ pipeline{
         }
         stage('Deploy to container'){
             steps{
-                sh 'docker run -d --name chatbot -p 3000:3000 sreedhar8897/chatbot:latest'
+                sh 'docker run -d --name chatbot -p 3000:3000 durgaprasad337/chatbot:latest'
             }
         }
         stage('Deploy to kubernetes'){
@@ -532,26 +526,3 @@ pipeline{
 ```go
 terraform destroy -auto-approve -var-file=variables.tfvars
 ```
-
----
-
-## 🛠️ Author & Community  
-
-This project is crafted by **[Harshhaa](https://github.com/NotHarshhaa)** 💡.  
-I’d love to hear your feedback! Feel free to share your thoughts.  
-
-📧 **Connect with me:**
-
-- **GitHub**: [@NotHarshhaa](https://github.com/NotHarshhaa)
-- **Blog**: [ProDevOpsGuy](https://blog.prodevopsguy.xyz)  
-- **Telegram Community**: [Join Here](https://t.me/prodevopsguy)  
-
----
-
-## ⭐ Support the Project  
-
-If you found this helpful, consider **starring** ⭐ the repository and sharing it with your network! 🚀  
-
-### 📢 Stay Connected  
-
-![Follow Me](https://imgur.com/2j7GSPs.png)
